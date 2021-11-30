@@ -7,7 +7,7 @@
 
     
 
-    <title>彙整: 2021 | Yiuzzx的部落格</title>
+    <title>被動收入分享 | Yiuzzx的部落格</title>
     <meta name="author" content="Yiuzzx Lin" />
     <meta name="keywords" content="PHP,php,被動收入,被動收入分享,HTML,CSS,MySQL,JQuery" />
     <meta name="description" content="" />
@@ -72,7 +72,7 @@
                 <span class="nav-text">標籤</span>
             </a>
         
-            <a class="nav-item active" href="/archives">
+            <a class="nav-item" href="/archives">
                 <span class="nav-text">檔案</span>
             </a>
         
@@ -92,6 +92,8 @@
     <div id="aside-inner" class="aside-inner">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://yliuzz.github.io"></form>
 
+        
+        
         
         
 
@@ -134,65 +136,64 @@
 
         <div id="content" class="content">
             <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
-
-
+                <article class="article" itemscope itemprop="blogPost">
     
-    
-    
-    
-    
-    <section class="archives-wrap">
-    <div class="archive-year-wrap">
-    <a href="/archives/2021" class="page-hd">
-        2021
-    </a>
-    </div>
-    <ol class="archives">
-    
-
-    <li class="archive-section-item">
+    <header class="article-header">
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/2021/11/30/%E8%A2%AB%E5%8B%95%E6%94%B6%E5%85%A5%E5%88%86%E4%BA%AB/">被動收入分享</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2021/11">
-    
-    <time class="vm" datetime="2021-11-30T09:48:06.000Z" itemprop="datePublished">11/30</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
-
-    
-    
-
-    <li class="archive-section-item">
+        <h1 itemprop="name">
+            被動收入分享
+        </h1>
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/2021/11/30/hello-world/">Hello World</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2021/11">
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://yliuzz.github.io/2021/11/30/%E8%A2%AB%E5%8B%95%E6%94%B6%E5%85%A5%E5%88%86%E4%BA%AB/index.html">
     
-    <time class="vm" datetime="2021-11-30T08:32:14.997Z" itemprop="datePublished">11/30</time>
+    <i class="icon-calendar vm"></i>
+    
+    <time class="vm" datetime="2021-11-30T09:48:06.000Z" itemprop="datePublished">2021-11-30</time>
 </a>
-)
-            </span>
-        </header>
-    </div>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag vm"></i>
+    <a class="article-tag-link" href="/tags/%E8%A2%AB%E5%8B%95%E6%94%B6%E5%85%A5/" rel="tag">被動收入</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        
+        
+    </section>
 </article>
-    </li>
 
 
-</ol></section>
 
+<a id="pagenext" href="/2021/11/30/hello-world/" class="article-next" title="Hello World"><i class="icon-arrow-right"></i></a>
+
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7fbe80427f54741e289f",
+        clientSecret: "f34ed5fd92e54c9000bd37ba951948cb939deff5",
+        repo: "yliuzz.github.io",
+        owner: "yliuzz",
+        admin: ["yliuzz"],
+        id: "00f4b6c8d10a5fddc011f491192a1145",
+        distractionFreeMode: true,
+        title: "被動收入分享",
+        body: "https://yliuzz.github.io/2021/11/30/%E8%A2%AB%E5%8B%95%E6%94%B6%E5%85%A5%E5%88%86%E4%BA%AB/",
+        labels: ["被動收入"]
+    }).render('comments');
+    </script>
+</div>
 
 
 
@@ -259,6 +260,33 @@
         });
     });
     </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
     
 
 </body>
