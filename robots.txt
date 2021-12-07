@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /categories
+Allow: /categories/front-end
+Allow: /categories/back-end
+Allow: /categories/money
+Allow: /tags
+Allow: /about
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+
+Sitemap: https://yliuzz.github.io/sitemap.xml
+
+
